@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@800&family=Poppins&family=Roboto&family=Ubuntu&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --bg-main: #081b29;
+  --color-text-main-2: #00abf0;
+  --text-color: #ededed;
+}
+body {
+  background: var(--bg-main);
+  color: var(--text-color);
+  display: block;
+}
+.container {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+}
+.container .header{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  width: 80vw;
+  margin: 0 5%;
+}
+.header .logo {
+  font-size: 30px;
+  color: var(--text-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+.header .navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .navbar a {
+  padding-left: 35px;
+  text-decoration: none;
+  font-size: 20x;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.header .navbar a:hover {
+  color: var(--color-text-main-2);
+}
+.home{
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  align-items: center;
+  background: url(home.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home .home-content{
+  max-width: 600px;
+  display: grid;
+  gap: 20px;
+}
+.home .home-content h1 {
+  font-size: 50px;
+  font-weight: 800;
+}
+.home .home-content h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-text-main-2);
+}
+.home .home-content p {
+  font-size: 18px;
+}
+.home .home-content .btn-box {
+  font-size: 20px;
+  margin-top: 40px;
+}
+.home .home-content .btn-box a {
+  width: 170px;
+  height: 50px;
+  padding: 8px 25px;
+  text-decoration: none;
+  border: 2px solid var(--color-text-main-2) ;
+  border-radius: 10px;
+  color: var(--color-text-main-2);
+  transition: width 1s;
+  background: linear-gradient(to right, var(--color-text-main-2) 50%,  transparent 0%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+}
+
+.home .home-content .btn-box a:nth-child(2){
+  margin-left: 30px;
+}
+.home .home-content .btn-box a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  background: transparent;
+}
+.home .home-content .btn-box a:hover {
+  width: 100%;
+  color: var(--bg-main);
+  background-position: left bottom;
+}
+
+.home-sci {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  bottom: 40px;
+}
+
+.home-sci a {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--color-text-main-2);
+  border-radius: 50%;
+  color: var(--color-text-main-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: linear-gradient(to right, var(--color-text-main-2) 50%,  transparent 0%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+  &::before {
+    width: 0;
+  }
+}
+.home-sci a:hover {
+  width: 40px;
+  background-position: left bottom;
+  color: var(--bg-main);
+}
+.hover-image{
+  width: calc(70vw - 600px);
+  height: 100vh;
+  transition: 1s;
+}
+.hover-image:hover{
+  opacity: 0.8;
+  background: #081b29;
+}
